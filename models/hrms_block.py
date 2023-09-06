@@ -1,5 +1,5 @@
+from customer_addons.hrms.models.hrms_constraint import Constraint
 from odoo import models, fields, api
-from hrms_constraint import Constraint
 
 
 class Block(models.Model):

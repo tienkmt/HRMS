@@ -1,4 +1,4 @@
-from hrms_constraint import Constraint
+from customer_addons.hrms.models.hrms_constraint import Constraint
 from odoo import models, fields, api
 
 

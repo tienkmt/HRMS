@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_departments_form" model="ir.ui.view">
+        <field name="name">departments.form</field>
+        <field name="model">departments</field>
+        <field name="arch" type="xml">
+            <form string="Departments">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="hight_departments"/>
+                        <field name="manager"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_departments_tree" model="ir.ui.view">
+        <field name="name">departments.tree</field>
+        <field name="model">departments</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="hight_departments"/>
+                <field name="manager"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="departments_action" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">departments</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_departments_tree"/>
+    </record>
+</odoo>
