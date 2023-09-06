@@ -18,11 +18,12 @@
 
     'depends': ['base'],
     'application': True,
-    'sequence': -10,
+    'sequence': -100,
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'security/hrm_security.xml',
+        'views/system_view.xml',
         'views/block_view.xml',
         'views/menu.xml',
     ],

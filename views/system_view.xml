@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="hrms_system_tree" model="ir.ui.view">
+        <field name="name">Hệ thống</field>
+        <field name="model">hrms.system</field>
+        <field name="arch" type="xml">
+
+        </field>
+    </record>
+
+    <record id="hrms_system_action" model="ir.actions.act_window">
+        <field name="name">Hệ thống</field>
+        <field name="res_model">hrms.system</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <!--        <field name="groups_id" eval="[(4, ref('group_restaurant_manager'))]"/>-->
+        <field name="view_id" ref="hrms.hrms_system_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Tạo mới một hệ thống
+            </p>
+            <p>
+                Bạn hãy tạo một hệ thống mà bạn muốn quản lý.
+            </p>
+        </field>
+    </record>
+</odoo>
