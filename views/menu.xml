@@ -2,7 +2,7 @@
     <menuitem id="menu_field" name="HRMS" sequence="-2"/>
 
     <menuitem id="config" name="Configuration" parent="menu_field" sequence="1"/>
-    <menuitem id="block" name="Block" parent="config" sequence="10" action='hrms.block_action'/>
+    <menuitem id="block" name="Block" parent="config" sequence="10" action='HRMs.block_action'/>
     <menuitem id="system" name="System" parent="config" sequence="20" action=''/>
     <menuitem id="subsidiaries" name="Subsidiaries" parent="config" sequence="30" action=""/>
     <menuitem id="team" name="Team" parent="config" sequence="40" action=""/>
