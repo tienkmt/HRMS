@@ -1,4 +1,5 @@
-from odoo import models, fields, api, exceptions
+from odoo import models, fields, api
+from hrms_constraint import Constraint
 
 
 class Block(models.Model):
@@ -20,14 +21,14 @@ class Block(models.Model):
             return
         elif len(existing_records) == 1:
             for rec in existing_records:
-                if rec.name == 'Văn phòng':
+                if rec.name == Constraint.BLOCK_OFFICE_NAME:
                     self._default_value_trade()
                 else:
                     self._default_value_ofice()
 
     def _default_value_ofice(self):
         self.create({
-            'name': 'Văn phòng',
+            'name': Constraint.BLOCK_OFFICE_NAME,
             'description': 'Khối văn phòng',
             'active': '1',
             'has_change': False
@@ -35,7 +36,7 @@ class Block(models.Model):
 
     def _default_value_trade(self):
         self.create({
-            'name': 'Thương mại',
+            'name': Constraint.BLOCK_TRADE_NAME,
             'description': 'Khối thương mại',
             'active': '1',
             'has_change': False
