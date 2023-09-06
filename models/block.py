@@ -17,7 +17,6 @@ class Block(models.Model):
         if len(existing_records) == 0:
             self._default_value_ofice()
             self._default_value_trade()
-            return
         elif len(existing_records) == 1:
             for rec in existing_records:
                 if rec.name == 'Văn phòng':
