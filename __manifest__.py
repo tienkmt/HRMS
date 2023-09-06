@@ -24,6 +24,7 @@
         'security/ir.model.access.csv',
         'security/hrm_security.xml',
         'views/block_view.xml',
+        'views/deppartments_view.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
